@@ -1,6 +1,17 @@
-var total = 0;
-var summands = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (var index = 0; index < summands.length; index +=2){
-  total += summands[index];
-}
-alert(total);
+$(document).ready(function(){
+  $("#userInput").click(function(event){
+    event.preventDefault();
+  });
+  var result = [];
+  var countTo = parseInt($("input#countTo").val());
+  var countBy = parseInt($("input#countBy").val());
+
+  for (var index = 0; index <= countTo; index += countBy){
+    result.push(index);
+    console.log(result);
+  };
+
+  $("#outPut").show(result);
+  console.log(result);
+
+});
